@@ -1,7 +1,7 @@
 var smartliving = require('smartliving');
 var smc = require('smc');	//OSX System Management Controller
 
-smartliving.loadCredentials();
+smartliving.credentials = require('credentials.json');
 
 cpu = smartliving.addAsset(
 	"102",

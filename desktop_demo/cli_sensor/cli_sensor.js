@@ -1,6 +1,6 @@
 var smartliving = require('smartliving');
 
-smartliving.loadCredentials();
+smartliving.credentials = require('credentials.json');
 
 var cli = smartliving.addAsset(
   "101",
