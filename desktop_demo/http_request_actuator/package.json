@@ -1,0 +1,8 @@
+{
+  "name": "smartliving-http-request-actuator",
+  "description": "Send automated HTTP Requests from SmartLiving via your own service",
+  "version": "0.0.1",
+  "dependencies": {
+     "smartliving":"*"
+  }
+}

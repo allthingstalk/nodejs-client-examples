@@ -1,0 +1,8 @@
+{
+  "name": "smartliving-system-beep-actuator",
+  "description": "A test actuator that allows your mac to receive alerts",
+  "version": "0.0.1",
+  "dependencies": {
+     "smartliving":"*"
+  }
+}

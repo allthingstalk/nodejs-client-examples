@@ -1,0 +1,9 @@
+{
+  "name": "smartliving-cpu-temp-sensor",
+  "description": "A sensor script that integrates your OSX CPU temperature and fan speed",
+  "version": "0.0.1",
+  "dependencies": {
+   	 "smc":"*",
+     "smartliving":"*"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "smartliving-tts-actuator",
+  "description": "A really simple Text-to-speech actuator to receive audible spoken messages directly on your mac",
+  "version": "0.0.1",
+  "dependencies": {
+     "say":"*",
+     "smartliving":"*"
+  }
+}

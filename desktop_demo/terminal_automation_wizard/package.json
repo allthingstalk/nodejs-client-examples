@@ -1,0 +1,9 @@
+{
+  "name": "smartliving-cli-sensor",
+  "description": "A test sensor that turns your terminal into a sensor input",
+  "version": "0.0.1",
+  "dependencies": {
+     "prompt":"*",
+     "smartliving":"*"
+  }
+}

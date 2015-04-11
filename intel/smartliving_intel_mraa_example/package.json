@@ -1,0 +1,9 @@
+{
+  "name": "smartliving_intel_getting_started",
+  "description": "This is 'hello world' style IoT application for starting to use your Intel controller with the SmartLiving IoT Cloud",
+  "version": "0.0.0",
+  "main": "main.js",
+  "dependencies": {
+    "smartliving": "^0.0.20"
+  }
+}

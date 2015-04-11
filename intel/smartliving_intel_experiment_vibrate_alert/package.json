@@ -1,0 +1,9 @@
+{
+  "name": "smartliving_intel_experiment_vibrate_alert",
+  "description": "",
+  "version": "0.0.0",
+  "main": "main.js",
+  "dependencies": {
+    "smartliving": "^0.0.20"
+  }
+}
