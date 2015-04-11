@@ -1,8 +1,9 @@
-var smartliving = require('../lib/smartliving');
+var smartliving = require('smartliving');
 var sys = require('sys')
 var exec = require('child_process').exec;
 
-smartliving.credentials = require('./variables');
+smartliving.loadCredentials();
+
 
 smartliving.addAsset("106",
   "Terminal input receiver",

@@ -1,7 +1,7 @@
-var smartliving = require('../lib/smartliving');
+var smartliving = require('smartliving');
 var tts = require('say');
 
-smartliving.credentials = require('./variables');
+smartliving.loadCredentials();
 
 smartliving.addAsset("109",
 	"A text to speech actuator",

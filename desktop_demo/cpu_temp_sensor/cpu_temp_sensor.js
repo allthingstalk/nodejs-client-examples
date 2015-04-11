@@ -1,7 +1,7 @@
-var smartliving = require('../lib/smartliving');
+var smartliving = require('smartliving');
 var smc = require('smc');	//OSX System Management Controller
 
-smartliving.credentials = require('./variables');
+smartliving.loadCredentials();
 
 cpu = smartliving.addAsset(
 	"102",
@@ -24,6 +24,6 @@ fan = smartliving.addAsset(
 smartliving.connect();
 
 setInterval(function(){
-	smartliving.send(smc.temperature(), cpu);  
-	smartliving.send(smc.fanRpm(0), fan); 
+	smartliving.send(smc.temperature(), "102");  
+	smartliving.send(smc.fanRpm(0), "103"); 
 },5000);

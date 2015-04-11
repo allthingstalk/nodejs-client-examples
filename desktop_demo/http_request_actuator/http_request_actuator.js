@@ -1,6 +1,6 @@
-var smartliving = require('./lib/smartliving');
+var smartliving = require('smartliving');
 
-smartliving.credentials = require('./variables');
+smartliving.loadCredentials();
 
 smartliving.addAsset(
   "105",

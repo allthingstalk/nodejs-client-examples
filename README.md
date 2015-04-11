@@ -11,7 +11,7 @@ Get started with the command line sensor app
 
 	npm install smartliving
 	git clone http://github.com/allthingstalk/nodejs-client-examples
-	cd /nodejs-client-examples/desktop_demo/
+	cd nodejs-client-examples/desktop_demo/cli_sensor/
 	node cli_sensor
 
 *Before running the demo sensor you'll need to update a credentials.json file with your own auth tokens and deviceId. Find these over at [beta.smartliving.io](http://beta.smartliving.io) (You'll also find an example credentials file in the package).*
