@@ -4,35 +4,34 @@ var grove = require('jsupm_grove');
 smartliving.credentials = require('./credentials');
 
 // Create the Grove button object using GPIO pin 8
-// NOTE: We're using the GroveLed UPM library which behaves exactly the same for PIR Motion sensor
-var d8 = new grove.GroveButton(8);
+// NOTE: We're using the GroveButton UPM library which behaves exactly the same for PIR Motion sensor
+var d2 = new grove.GroveButton(2);
 
 // Set up the PIR sensor
 pir = smartliving.addAsset(
-	"d8",
+	"d2",
 	"Motion detector",
 	"Detects passive infrared motion",
 	"bool",
 	function(){
-    	console.log("Motion detector enrolled")
+    console.log("Motion detector enrolled")
 	}
 );
 
 smartliving.connect();
 
-d8State = false;
+var state = false; //Boolean to hold the state of Led
 
 setInterval(function(){
  
-    var reading = d8.value();
-  if (d8State != reading){ 				 
-    reading = d8State;
-   
-    if (d8State == 1){
-       smartliving.send("true", "d8");
+  var reading = d2.value();
+	
+  if (state != reading){ 				 
+    if (state){
+       smartliving.send("true", "d2");
+    }else{
+       smartliving.send("false", "d2");
     }
-    else{
-       smartliving.send("false", "d8");
-    }
+	  state = !state;
   }
 },100);

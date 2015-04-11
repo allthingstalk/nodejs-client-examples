@@ -1,47 +1,50 @@
 var smartliving = require('smartliving');
 var grove = require('jsupm_grove');
 
-smartliving.loadCredentials();
+smartliving.credentials = require('./credentials');
 
-// Create the Grove LED object using GPIO pin 2
+// Create the Grove LED object using GPIO pin 8
 var d8 = new grove.GroveLed(8);
 var a0 = new grove.GroveRotary(0);
 
-var ledState = false; //Boolean to hold the state of Led
-
 // Set up the Potentiometer Sensor
 pot = smartliving.addAsset(
-	"d8",
-	"Thermoreactor turbine controller",
+	"a0",
+	"Thermo-reactor turbine speed controller",
 	"Controls the main turbine of the nuclear reactor, using a good ol' potentiometer",
 	"int",
 	function(){
-    	console.log("Turbine Potentiometer controller enrolled")
+    	console.log("Turbine potentiometer controller enrolled")
 	}
 );
 
+var state = false; //Boolean to hold the state of Led
+
 // Set up the LED Actuators
 led = smartliving.addAsset(
-	"a0",
-	"Missle launcher",
-	"Fires 10xD missles at incoming spacecraft, and also a neat LED for some visual feedback...",
+	"d8",
+	"Missile launcher notification",
+	"Fires missiles at incoming spacecraft, and also a neat LED for some visual feedback...",
 	"bool",
 	function(){
-    	console.log("Missle LED enrolled")
+    	console.log("Missile notification LED enrolled")
 	},
 	function() {
- 		if(ledState){
-            led.on();
+ 		if(state){
+            d8.on();
  		}else{
- 	        led.off();
+ 	        d8.off();
  		}
- 		ledState = !ledState; //invert the ledState
+ 		state = !state; //invert the ledState
 	}
 );
 
 smartliving.connect();
 
+
 setInterval(function(){
+	
+    //Write the knob value to the console in different formats
     var abs = a0.abs_value();
     var absdeg = a0.abs_deg();
     var absrad = a0.abs_rad();
@@ -50,9 +53,8 @@ setInterval(function(){
     var reldeg = a0.rel_deg();
     var relrad = a0.rel_rad();
 
-    //write the knob value to the console in different formats
     console.log("Abs: " + abs + " " + Math.round(parseInt(absdeg)) + " " + absrad.toFixed(3));
     console.log("Rel: " + rel + " " + Math.round(parseInt(reldeg)) + " " + relrad.toFixed(3));
 
-    smartliving.send(Math.round(parseInt(absdeg)), pot)
+    smartliving.send(abs, "a0");
 },5000);

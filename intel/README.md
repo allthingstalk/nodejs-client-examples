@@ -2,7 +2,21 @@
 
 Here you'll find everything you need to get started with your Intel Galileo & Edison... Along with some great tutorials and experiments.
 
-<IMAGE ON SETUP>
+## Hardware setup for Experiments
+
+	a0 = Potentiometer
+	a1 = Light sensor
+	a2 = Temperature sensor
+	a3 = ???
+	
+	d4 = Push button
+	d3 = IR transmitter
+	d2 = Motion sensor
+
+	d8 = LED
+	d7 = Vibration motor
+	d6 = LED bar 
+	d5 = IR receiver / RFID Receiver
 
 ## Setting up your controller with the Intel IoT Developer Kit Operating System Image
 Both the Intel Edison and Galileo can run custom Linux operating systems and many are available, the most suitable for SmartLiving is the IoT Developer Kit Edition(Which is setup already to use the Intel XDK).
@@ -30,19 +44,11 @@ If you're using the Intel Edison you'll need to configure it to connect to your 
 - Using a serial connection enter the device
 - Enter... configure_edison
 
-
-
-
-
 ## Intel XDK IoT Edition Setup & Overview 
 
 [SCREENSHOT]
 
 The Intel XDK IOT Edition is a Integrated Development Environment (IDE) built espically for the Intel IoT Devices. It's primary use is to make it easier to prototype with hardware controllers and front-end HTML5 apps using a suitable development and testing environment for both components.
-
-
-
-
 
 ## Beyond the XDK Environment
 - Arduino IDE

@@ -6,7 +6,7 @@ smartliving.credentials = require('./credentials');
 // Create the Grove LED object using GPIO pin 8
 var d8 = new grove.GroveLed(8);
 
-var ledState = false; //Boolean to hold the state of Led
+var state = false; //Boolean to hold the state of Led
 
 // Set up the LED actuator
 led = smartliving.addAsset(
@@ -17,12 +17,12 @@ led = smartliving.addAsset(
 	function(){
     	console.log("LED actuator enrolled")
 	},function() {
-    if(ledState){
-            led.on();
+    if(state){
+      led.on();
     }else{
-          led.off();
+      led.off();
     }
-    ledState = !ledState; //invert the ledState
+    state = !state; //invert the ledState
   }
 );
 

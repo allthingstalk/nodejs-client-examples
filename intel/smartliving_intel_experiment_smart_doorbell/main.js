@@ -3,39 +3,33 @@ var grove = require('jsupm_grove');
 
 smartliving.credentials = require('./credentials');
 
-// Create the Grove button object using GPIO pin 8
-var d8 = new grove.GroveButton(8);
+// Create the Grove button object using GPIO pin 4
+var d4 = new grove.GroveButton(4);
 
 // Set up the push button sensor
 button = smartliving.addAsset(
-	"d8",
+	"d4",
 	"Doorbell push button",
 	"A digital push button",
 	"bool",
 	function(){
-    	console.log("Push button enrolled")
+    console.log("Push button enrolled")
 	}
 );
 
 smartliving.connect();
 
-bool prevReading = false;
+var state = false; //Boolean to hold the state of pin
 
 setInterval(function(){
  
-    var reading = d8.value();
-  if (prevReading != reading){ 				 
-    reading = prevReading;
-   
-    if (prevReading == 1){
-       smartliving.send("true", "d8");
+  var reading = d4.value();
+  if (state != reading){ 				   
+    if (state){
+       smartliving.send("true", "d4");
+    }else{
+       smartliving.send("false", "d4");
     }
-    else{
-       smartliving.send("false", "d8");
-    }
+    state=!state;
   }
 },100);
-
-
-
-

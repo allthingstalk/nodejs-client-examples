@@ -3,12 +3,12 @@ var grove = require('jsupm_grove');
 
 smartliving.credentials = require('./credentials');
 
-// Create the Grove button object using GPIO pin 8
-var a0 = new grove.GroveLight(0);
+// Create the Grove Light sensor object using GPIO pin a1
+var a1 = new grove.GroveLight(1);
 
 // Set up the push button sensor
 light = smartliving.addAsset(
-	"a0",
+	"a1",
 	"Lux sensor",
 	"Reads light in lux",
 	"int",
@@ -20,5 +20,5 @@ light = smartliving.addAsset(
 smartliving.connect();
 
 setInterval(function(){
-  smartliving.send(a0.value(), "a0");
+  smartliving.send(a1.value(), "a1");
 },5000);
