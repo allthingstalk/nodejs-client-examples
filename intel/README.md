@@ -89,9 +89,9 @@ If you run in to problems the experts over at Intel can help get things solved
 
 
 ## SmartLiving IoT Starter Kit - Apps and Experiments
-We wrote a series of tutorials for you use with your SmartLiving IoT Starter Kit, for the detailed docs go checkout docs.smartliving.io
+To get started with these experiments you just need to open the project through the Intel IoT XDK, assuming you downloaded/cloned this git repo to your computer.
 
-Here's a list of what you can can build and experiement:
+Here's a list of what you can build and experiement with:
 
 - Smart doorbell
 - Get warned when your Smartphone is unplugged
@@ -107,11 +107,11 @@ Generally we use the same hardware setup for the grove modules using the same pi
 	a1 = Light sensor
 	a2 = Temperature sensor
 	
-	d4 = Push button
+	d8 = Push button
 	d3 = IR emitter
 	d2 = Motion sensor
 
-	d8 = LED
+	d4 = LED
 	d7 = Vibration motor
 	d6 = LED bar 
 	d5 = IR receiver / RFID Receiver
