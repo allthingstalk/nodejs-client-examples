@@ -1,61 +1,121 @@
-# SmartLiving Intel Galileo & Edison Node.js Client Scripts and Experiments
+# SmartLiving Intel Galileo & Edison IoT XDK Node.js Apps and Experiments
 
-Here you'll find everything you need to get started with your Intel Galileo & Edison... Along with some great tutorials and experiments.
+Here you'll find everything you need to get started with your SmartLiving IoT Starter Kit: Intel Edison Edition.
 
-## Hardware setup for Experiments
+This kit uses the awesome Intel IoT XDK (Cross-platform Development Kit) for Galileo & Edison, making it easy to program IoT applications.
+
+## What can you find?
+Find the documentation and places to get support for starting with your IoT Kit
+
+- Preparing the Intel IoT Hardware and Software
+- 10 step getting started for SmartLiving and Intel IoT **(For pro's)**
+- Step by step walkthrough getting started for SmartLiving and Intel IoT **(For beginners)**
+- SmartLiving IoT Starter Kit Experiments 
+- Troubleshooting
+- How to's
+
+## Preparing your IoT Hardware & Software
+Here's a few pointers to get you ready to develop with the SmartLiving IoT Starter Kit, and to navigate Intel's Development portal.
+
+### Intel XDK IoT Edition Install & Overview 
+
+![image](http://d2wwfe3odivqm9.cloudfront.net/wp-content/uploads/2014/12/xdk-2.png)
+
+The Intel XDK IOT Edition is a Integrated Development Environment (IDE) built especially for Intel IoT Devices. It's primary use is to make it easier to prototype with hardware controllers and front-end HTML5 apps using an all in one solution for development and testing.
+
+### Download the XDK
+Follow download the software from the Intel website:
+
+[https://software.intel.com/en-us/html5/xdk-iot](https://software.intel.com/en-us/html5/xdk-iot)
+
+If you would like the techie guide follow Intel's [getting started page](https://software.intel.com/en-us/xdk/docs/getting-started-with-intel-xdk-iot-edition)
+
+
+
+### Preparing your Controller
+#### Edison
+
+The Edison has everything onboard to get started, but you will have to configure the device and connect it to your WiFi network. This is a one-time action to get setup and requires connecting directly to the Edison with a serial cable, here's the steps:
+
+- Connect your Edison to the breakout board and power it up
+- Time to configure the Edison, here's a guide depending on what OS your computer uses:
+	- [For Windows](https://software.intel.com/en-us/articles/getting-started-with-the-intel-edison-board-on-windows)
+	- [For Mac OS](https://software.intel.com/en-us/articles/getting-started-with-the-intel-edison-board-on-mac#terminal)
+	- [For Linux](https://software.intel.com/en-us/articles/getting-started-with-the-intel-edison-board-on-linux#terminal)
+- Once you've configured the name and password you can now set up the WiFi, whilst still connected via serial enter
+ 
+		configure_edison --wifi
+		*Select your network*
+		*Enter the networks password (If required)* 
+
+If you're using a Windows 64 bit machine you can use this neat app Intel have built to make this process a bit easier(Mac and Linux setup apps coming soon!)
+
+http://downloadmirror.intel.com/24738/eng/iotdk_win_installer.exe
+
+- To check that all went smoothly, start the Intel XDK and look for your IoT device (It should read something like *quark123891234*) 
+
+For more help setting up your Edison check out the Intel developer resources for Edison:
+https://software.intel.com/en-us/articles/intel-edison-developer-resources
+https://software.intel.com/en-us/articles/intel-edison-getting-started-wifi
+
+#### Galileo
+The Galileo uses an SD card to store its operating system so you will need to grab the latest OS and burn it to your card. Let's prep' it.
+
+- [Download the latest IoT Development Kit image](https://software.intel.com/en-us/iot/downloads)
+- Burn to your SD card using Intel’s guide for your operating system
+	- [For Windows](https://software.intel.com/en-us/programming-blank-sd-card-with-yocto-linux-image-windows)
+	- [For Mac OS](https://software.intel.com/en-us/programming-blank-sd-card-with-yocto-linux-image-os-x)
+	- [For Linux](https://software.intel.com/en-us/programming-blank-sd-card-with-yocto-linux-image-linux)
+- Put the SD card in your controller, attach the network and power up your controller
+- To check that all went smoothly, start the Intel XDK and look for your IoT device (It should read something like *quark123891234*) 
+
+For more help setting up your Galileo check out the Intel developer resources for Galileo:
+
+### First run Blinking LED
+Before getting started building your IoT applications with SmartLiving, let's test drive what's just been set up with a Blinking LED 
+
+- Open the XDK
+- Select 'New project based on template'
+- Blinking LED
+- Select your IoT Device
+- Upload
+- Run
+
+The onboard LED should now be blinking. Woohoo!
+
+**Time to make some real IoT happen.**
+
+### Getting help setting up the Intel IoT Tools
+If you run in to problems the experts over at Intel can help get things solved
+
+[https://software.intel.com/en-us/forums/intel-xdk-iot-edition](https://software.intel.com/en-us/forums/intel-xdk-iot-edition)
+
+
+
+## SmartLiving IoT Starter Kit - Apps and Experiments
+We wrote a series of tutorials for you use with your SmartLiving IoT Starter Kit, for the detailed docs go checkout docs.smartliving.io
+
+Here's a list of what you can can build and experiement:
+
+- Smart doorbell
+- Get warned when your Smartphone is unplugged
+- Sense and interpret light values
+- Smart shop window
+- Motion detector to Android text-to-speech trigger
+
+### Hardware setup for Apps and Experiments
+
+Generally we use the same hardware setup for the grove modules using the same pins so you can set your hardware up and leave it
 
 	a0 = Potentiometer
 	a1 = Light sensor
 	a2 = Temperature sensor
-	a3 = ???
 	
 	d4 = Push button
-	d3 = IR transmitter
+	d3 = IR emitter
 	d2 = Motion sensor
 
 	d8 = LED
 	d7 = Vibration motor
 	d6 = LED bar 
 	d5 = IR receiver / RFID Receiver
-
-## Setting up your controller with the Intel IoT Developer Kit Operating System Image
-Both the Intel Edison and Galileo can run custom Linux operating systems and many are available, the most suitable for SmartLiving is the IoT Developer Kit Edition(Which is setup already to use the Intel XDK).
-
-### Download the IoT Developer Kit Image
-This image can be tricky to find depending on where Intel decides to place it(Which seems to change...), we'll do our best to always ensure you have the correct one:
-
-[https://software.intel.com/en-us/iot/downloads](https://software.intel.com/en-us/iot/downloads)
-
-### Burning to your SD Card
-You will need something like Win32DiskImager, Pi Baker, or other img writing tool. Here are a few brief steps
-
-#### Windows
-#### OSX
-#### UNIX
-
-### Running your Controller for the first time 
-The first time you run your controller it can take a while to boot up, so leave it for a minute or two.
-
-If you have a Galileo connected via Ethernet it should be discoverable via the Intel XDK, so jump to the next section.
-
-If you're using the Intel Edison you'll need to configure it to connect to your local WiFi network. Here's a few simple steps to do that. 
-
-- Connected a micro USB cable
-- Using a serial connection enter the device
-- Enter... configure_edison
-
-## Intel XDK IoT Edition Setup & Overview 
-
-[SCREENSHOT]
-
-The Intel XDK IOT Edition is a Integrated Development Environment (IDE) built espically for the Intel IoT Devices. It's primary use is to make it easier to prototype with hardware controllers and front-end HTML5 apps using a suitable development and testing environment for both components.
-
-## Beyond the XDK Environment
-- Arduino IDE
-- Yocto Linux OS
-
-
-
-### Troubleshooting
-- The hostname on the network should read, quark or galileo witha  few digits afterwards. If it's booting with 'Clanton' you're using the non-IoT image which provides basic support for Python, Node.js and lacks the XDK-Daemon. Go find the correct image here and burin it correctly
-- If you can't find a network connection you should use a serial connection to connect to your controller 

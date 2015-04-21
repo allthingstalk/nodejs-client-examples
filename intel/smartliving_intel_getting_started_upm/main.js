@@ -3,8 +3,8 @@ var grove = require('jsupm_grove');
 
 smartliving.credentials = require('./credentials');
 
-// Create the Grove LED object using GPIO pin 8
-var d8 = new grove.GroveLed(8);
+// Create the Grove LED object using GPIO pin 4
+var d4 = new grove.GroveLed(4);
 var a0 = new grove.GroveRotary(0);
 
 // Set up the Potentiometer Sensor
@@ -18,32 +18,27 @@ pot = smartliving.addAsset(
 	}
 );
 
-var state = false; //Boolean to hold the state of Led
-
 // Set up the LED Actuators
 led = smartliving.addAsset(
-	"d8",
+	"d4",
 	"Missile launcher notification",
 	"Fires missiles at incoming spacecraft, and also a neat LED for some visual feedback...",
 	"bool",
 	function(){
     	console.log("Missile notification LED enrolled")
 	},
-	function() {
- 		if(state){
-            d8.on();
+	function(command) {
+ 		if(command=="true"){
+            d4.on();
  		}else{
- 	        d8.off();
+ 	        d4.off();
  		}
- 		state = !state; //invert the ledState
 	}
 );
 
 smartliving.connect();
 
-
 setInterval(function(){
-	
     //Write the knob value to the console in different formats
     var abs = a0.abs_value();
     var absdeg = a0.abs_deg();
@@ -57,4 +52,4 @@ setInterval(function(){
     console.log("Rel: " + rel + " " + Math.round(parseInt(reldeg)) + " " + relrad.toFixed(3));
 
     smartliving.send(abs, "a0");
-},5000);
+},1000);

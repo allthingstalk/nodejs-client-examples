@@ -3,27 +3,24 @@ var grove = require('jsupm_grove');
 
 smartliving.credentials = require('./credentials');
 
-// Create the Grove LED object using GPIO pin 8
-var d8 = new grove.GroveLed(8);
-
-var state = false; //Boolean to hold the state of Led
+// Create the Grove LED object using GPIO pin 4
+var d4 = new grove.GroveLed(4);
 
 // Set up the LED actuator
 led = smartliving.addAsset(
-	"d8",
+	"d4",
 	"Shop window lighting",
 	"A connected LED strip",
 	"bool",
 	function(){
     	console.log("LED actuator enrolled")
-	},function() {
-    if(state){
+	},function(command) {
+    if(command=="true"){
       led.on();
     }else{
       led.off();
     }
-    state = !state; //invert the ledState
-  }
+}
 );
 
 smartliving.connect();

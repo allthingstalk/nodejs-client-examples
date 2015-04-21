@@ -7,8 +7,6 @@ smartliving.credentials = require('./credentials');
 // NOTE: We're using the GroveLed UPM library which behaves exactly the same for vibration motor
 var d7 = new grove.GroveLed(7);
 
-var state = false; //Boolean to hold the state of pin
-
 // Set up the Vibration motor actuator
 led = smartliving.addAsset(
 	"d7",
@@ -17,13 +15,12 @@ led = smartliving.addAsset(
 	"bool",
 	function(){
     	console.log("Vibration alert actuator enrolled")
-	},function() {
-    if(state){
+	},function(command) {
+    if(command=="true"){
       d7.on();
     }else{
       d7.off();
     }
-    state = !state; //invert the pin state
   }
 );
 

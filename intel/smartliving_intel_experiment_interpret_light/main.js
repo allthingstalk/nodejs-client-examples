@@ -20,5 +20,8 @@ light = smartliving.addAsset(
 smartliving.connect();
 
 setInterval(function(){
+  console.log(a1.name() + " raw value is " + a1.raw_value() +
+            ", which is roughly " + a1.value() + " lux");
+	
   smartliving.send(a1.value(), "a1");
 },5000);

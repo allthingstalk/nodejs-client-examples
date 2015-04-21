@@ -1,21 +1,38 @@
 # SmartLiving Internet of Things Node.js library, for Raspberry Pi, Intel Edison/Galileo, Web services
 
-Used to connect your sensors, actuators, apps, services, controllers... cat, dog, grandmother to the SmartLiving IoT cloud platform, and interact with any other hardware or front-end you connect.
+Use it to connect your sensors, actuators, apps, services, controllers... Cat, dog, grandmother to the SmartLiving IoT Cloud platform, and interact with any other hardware or front-end you connect using REST, MQTT, STOMP, or AMQP.
 
-## Playing with the examples
-Here's a ton of examples that will run on Intel Galileo and Edison, and other desktop demos. 
+For more info' on what you can connect checkout [www.smartliving.io](http://www.smartliving.io)
 
-Otherwise checkout the [Node.js client library at Github](https://github.com/allthingstalk/nodejs-client) or the [SmartLiving Doc's](http://docs.smartliving.io) for more info'.
-
+## Quick start example
 Get started with the command line sensor app
 
 	npm install smartliving
 	git clone http://github.com/allthingstalk/nodejs-client-examples
-	cd nodejs-client-examples/desktop_demo/cli_sensor/
+	cd nodejs-client-examples/desktop_demo/cli_sensor
+	//Create and update your credentials.json file**
 	node cli_sensor
 
-*Before running the demo sensor you'll need to update a credentials.json file with your own auth tokens and deviceId. Find these over at [beta.smartliving.io](http://beta.smartliving.io) (You'll also find an example credentials file in the package).*
+**Before running the command line sensor you'll need to update a credentials.json file with your own auth tokens and deviceId. Here's how you should go about doing that*
 
+- Create a file in the **cli_sensor** directory called **credentials.json**
+- Use the format like so:
+	
+		{
+   		 	"deviceId":"jM95n6L75aCt9H9w58sN9sz",
+   			"clientId":"MyPersonalClientId",
+   			"clientKey":"Cl13n7K3y"
+		}
+
+- Create a **device** over at [beta.smartliving.io](http://beta.smartliving.io) and open the sidebar to find your unique deviceId, clientId and clientKey
+- Copy and paste your ID's to the correct fields in the credentials.json file you created
+- Save and run the app!
+
+
+## Playing with the examples
+There are many examples included that will run on Intel Galileo and Edison, as web services, and other desktop demos. 
+
+For more info' checkout [Node.js client library at Github](https://github.com/allthingstalk/nodejs-client) and the [SmartLiving Doc's](http://docs.smartliving.io).
 
 Here's a list of the examples:
 
@@ -27,11 +44,10 @@ Here's a list of the examples:
 	- Smart shop window
 	- Motion detector to Android text-to-speech trigger
 - Desktop demos
-	- CLI sensor
+	- Command line sensor
 	- System beep warning actuator
 	- OSX Text-to-speech actuator 
 	- OSX CPU temperature and fan speed sensor
-	- HTTP Request actuator (Send automated HTTP Requests from SmartLiving via your own service)
 
 ## Todo list
 - Update the Raspberry Pi pi-gpio examples 
