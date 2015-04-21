@@ -5,7 +5,7 @@ Here you'll find everything you need to get started with your SmartLiving IoT St
 This kit uses the awesome Intel IoT XDK (Cross-platform Development Kit) for Galileo & Edison, making it easy to program IoT applications.
 
 ## What can you find?
-Find the documentation and places to get support for starting with your IoT Kit
+Find the documentation and places to get support for starting with Intel IoT SBC's
 
 - Preparing the Intel IoT Hardware and Software
 - 10 step getting started for SmartLiving and Intel IoT **(For pro's)**
@@ -15,7 +15,7 @@ Find the documentation and places to get support for starting with your IoT Kit
 - How to's
 
 ## Preparing your IoT Hardware & Software
-Here's a few pointers to get you ready to develop with the SmartLiving IoT Starter Kit, and to navigate Intel's Development portal.
+Here's a few pointers to get you ready to developing with  SmartLiving and Intel SBC's.
 
 ### Intel XDK IoT Edition Install & Overview 
 
@@ -24,21 +24,19 @@ Here's a few pointers to get you ready to develop with the SmartLiving IoT Start
 The Intel XDK IOT Edition is a Integrated Development Environment (IDE) built especially for Intel IoT Devices. It's primary use is to make it easier to prototype with hardware controllers and front-end HTML5 apps using an all in one solution for development and testing.
 
 ### Download the XDK
-Follow download the software from the Intel website:
+Follow the link and download the software from the Intel website:
 
 [https://software.intel.com/en-us/html5/xdk-iot](https://software.intel.com/en-us/html5/xdk-iot)
 
 If you would like the techie guide follow Intel's [getting started page](https://software.intel.com/en-us/xdk/docs/getting-started-with-intel-xdk-iot-edition)
 
-
-
 ### Preparing your Controller
 #### Edison
 
-The Edison has everything onboard to get started, but you will have to configure the device and connect it to your WiFi network. This is a one-time action to get setup and requires connecting directly to the Edison with a serial cable, here's the steps:
+The Edison has everything onboard to get started, but you will have to configure the device and connect it to your WiFi network. This is a one-time action to get setup and requires connecting directly to the Edison with a serial cable, here are the steps:
 
 - Connect your Edison to the breakout board and power it up
-- Time to configure the Edison, here's a guide depending on what OS your computer uses:
+- Time to configure the Edison, in short you need to connect via serial connection and run the configuration command,here's a detailed guide depending on what OS your computer uses:
 	- [For Windows](https://software.intel.com/en-us/articles/getting-started-with-the-intel-edison-board-on-windows)
 	- [For Mac OS](https://software.intel.com/en-us/articles/getting-started-with-the-intel-edison-board-on-mac#terminal)
 	- [For Linux](https://software.intel.com/en-us/articles/getting-started-with-the-intel-edison-board-on-linux#terminal)
@@ -48,15 +46,13 @@ The Edison has everything onboard to get started, but you will have to configure
 		*Select your network*
 		*Enter the networks password (If required)* 
 
-If you're using a Windows 64 bit machine you can use this neat app Intel have built to make this process a bit easier(Mac and Linux setup apps coming soon!)
-
-http://downloadmirror.intel.com/24738/eng/iotdk_win_installer.exe
+**NOTE:** *If you're using a Windows 64 bit machine you can use this [neat app Intel](http://downloadmirror.intel.com/24738/eng/iotdk_win_installer.exe) have built to make this process a bit easier(Mac and Linux apps coming soon, apparently )*
 
 - To check that all went smoothly, start the Intel XDK and look for your IoT device (It should read something like *quark123891234*) 
 
 For more help setting up your Edison check out the Intel developer resources for Edison:
-https://software.intel.com/en-us/articles/intel-edison-developer-resources
-https://software.intel.com/en-us/articles/intel-edison-getting-started-wifi
+- [Intel Edison Developer Resources](https://software.intel.com/en-us/articles/intel-edison-developer-resources)
+- [Intel Edison getting started with Wifi](https://software.intel.com/en-us/articles/intel-edison-getting-started-wifi)
 
 #### Galileo
 The Galileo uses an SD card to store its operating system so you will need to grab the latest OS and burn it to your card. Let's prep' it.
