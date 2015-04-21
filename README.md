@@ -36,7 +36,7 @@ For more info' checkout [Node.js client library at Github](https://github.com/al
 
 Here's a list of the examples:
 
-- [Intel Galileo & Edison](/intel/README.md)
+- [Intel Galileo & Edison](/tree/master/intel)
 	- Getting Started with SmartLiving & the Intel IoT XDK
 	- Smart doorbell
 	- Get warned when your Smartphone is unplugged
