@@ -63,24 +63,21 @@ configure_edison --upgrade
 
 systemctl status xdk-daemon -l
 
-systemctl enable xdk-daemon
-systemctl restart xdk-daemon
+  systemctl enable xdk-daemon
+  systemctl restart xdk-daemon
 
 ## Can't connect via daemon
 Your host machine channged IP address and it's not in the whitelist
 
-xdk-whitelist --list 
-xdk-whitelist --add <Your ip address>
-xdk-whitelist --add <127.0.0.1>
+  xdk-whitelist --list 
+  xdk-whitelist --add <Your ip address>
+  xdk-whitelist --add 127.0.0.1
 
 ## Can't find mraa library
 
-echo "src mraa-upm http://iotdk.intel.com/repos/1.1/intelgalactic" > /etc/opkg/mraa-upm.conf
-opkg update
-opkg upgrade
+  echo "src mraa-upm http://iotdk.intel.com/repos/1.1/intelgalactic" > /etc/opkg/mraa-upm.conf
+  opkg update
+  opkg upgrade
 
 ## Clock time is 7 months off...
-
-Update the time on the device, with 'Sync PC time w/clock on target device'
-
-
+Update the time on the device, with 'Sync PC time w/clock on target device' from the XDK development page
