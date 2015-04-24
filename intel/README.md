@@ -28,7 +28,10 @@ Follow the link and download the software from the Intel website:
 
 [https://software.intel.com/en-us/html5/xdk-iot](https://software.intel.com/en-us/html5/xdk-iot)
 
+Once downloaded install as you would any other software and then create an account through the XDK so you can get started.
+
 If you would like the techie guide follow Intel's [getting started page](https://software.intel.com/en-us/xdk/docs/getting-started-with-intel-xdk-iot-edition)
+
 
 ### Preparing your Controller
 #### Edison
@@ -40,11 +43,19 @@ The Edison has everything onboard to get started, but you will have to configure
 	- [For Windows](https://software.intel.com/en-us/articles/getting-started-with-the-intel-edison-board-on-windows)
 	- [For Mac OS](https://software.intel.com/en-us/articles/getting-started-with-the-intel-edison-board-on-mac#terminal)
 	- [For Linux](https://software.intel.com/en-us/articles/getting-started-with-the-intel-edison-board-on-linux#terminal)
-- Once you've configured the name and password you can now set up the WiFi, whilst still connected via serial enter
+- Once you've configured the name and password you can now set up the WiFi, whilst still connected via serial connection enter the following:
  
 		configure_edison --wifi
 		*Select your network*
 		*Enter the networks password (If required)* 
+		
+- The last step is to add your host computer's IP address to the Edison whitelist, via the serial connection enter the following: 
+  		
+		xdk-whitelist --add <Your IP address>
+		xdk-whitelist --add 127.0.0.1
+		
+*To find your IP address open a command prompt and enter ifconfig (For Linux & Mac) or ipconfig (For Windows), make sure you use the IP address from the same local network the controller is on*
+		
 
 **NOTE:** *If you're using a Windows 64 bit machine you can use this [neat app Intel](http://downloadmirror.intel.com/24738/eng/iotdk_win_installer.exe) have built to make this process a bit easier(Mac and Linux apps coming soon, apparently )*
 

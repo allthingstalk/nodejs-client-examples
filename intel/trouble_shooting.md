@@ -61,8 +61,7 @@ configure_edison --upgrade
 
 ## Connecting to the Edison via the XDK fails, but I can SSH in
 
-systemctl status xdk-daemon -l
-
+  - systemctl status xdk-daemon -l
   - systemctl enable xdk-daemon
   - systemctl restart xdk-daemon
 
@@ -81,3 +80,10 @@ Your host machine channged IP address and it's not in the whitelist
 
 ## Clock time is 7 months off...
 Update the time on the device, with 'Sync PC time w/clock on target device' from the XDK development page
+
+
+## Can't find my intel device
+Ensure Bonjour is running and your on the same network (Windows users need to install bonjour manually!)
+
+## Can't find serial device from the XDK
+Ensure the FTDI driver is installed on your machines (Windows users need to do this manually)

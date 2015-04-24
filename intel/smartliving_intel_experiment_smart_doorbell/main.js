@@ -8,7 +8,7 @@ var d8 = new grove.GroveButton(8);
 
 // Set up the push button sensor
 button = smartliving.addAsset(
-	"d4",
+	"d8",
 	"Doorbell push button",
 	"A digital push button",
 	"bool",
