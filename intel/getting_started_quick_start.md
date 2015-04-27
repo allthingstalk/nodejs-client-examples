@@ -20,13 +20,13 @@ Here's a short sharp starter guide for getting started with SmartLiving and the 
 	- Power up your device
 
 4. Log in and create your device over at [beta.smartLiving.io](http://beta.smartliving.io)
-5. Create and configure your credentials.json at the root of the project
-
-	*{
-		"deviceId":"",
-		"clientId":"",
-		"clientKey":""
-	}*
+5. Create and configure your *credentials.json* at the root of the project
+    
+       { 
+           "deviceId":"",
+           "clientId":"",
+           "clientKey":""
+       }
 
 6. Hit the upload button
 7. Run your project
@@ -36,19 +36,16 @@ Here's a short sharp starter guide for getting started with SmartLiving and the 
 	
 	*The LED is controllable from a toggle button*
 	
-9. Create an automation rule
+9. Create an automation rule (Follow the wizard but the logic should read as follows)
 
-	When EdisonStarter.knob > 500 Then EdisonStarter.Led = True
+	     When 
+	     		EdisonStarter.knob > 500
+	     Then 
+	     		EdisonStarter.Led = True
 
 10. Try out your automation rule!
 
 ** This quick start assumes you've already installed the XDK, prepared your controller, and took your Edison on a test flight **
     
-## Extra info
-- A simple Step by step guide for SmartLiving Intel Getting started
-- Troubleshooting
-- Setting up the IoT Development Kit Image on your SD Card
-- Getting started with the Intel IoT XDK
-
 ## Next steps
-- Try out more experiments for Intel controllers
+- Try out more experiments for Intel controllers that you can find in the repo'!
