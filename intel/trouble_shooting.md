@@ -76,6 +76,10 @@ This is an intermittent problem normally. Try an SSH/Serial connection, reboot y
 
 configure_edison -upgrade
 
+## Receiving *uncaught Exception occurred Error: dns.service.error: bad reference* 
+
+Reboot the device 
+
 ## Connecting to the Edison via the XDK fails, but I can SSH in
 
   - systemctl status xdk-daemon -l

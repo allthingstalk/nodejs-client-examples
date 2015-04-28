@@ -170,6 +170,10 @@ If you run into big problems the experts over at Intel can help get things solve
 
 ## Other info'
 
+### Working with different Grove sensors
+Checkout this great collection of Node.js examples using a whole range of Grove sensors and actuators over at the [Intel IoT dev kit GitHub](https://github.com/intel-iot-devkit/upm/tree/master/examples/javascript)
+
+
 ### Getting started with Galileo
 If you have an Intel Galileo, you can try out all the exact same apps and experiments available with the SmartLiving Edison Kit.
 
