@@ -1,10 +1,10 @@
 # Troubleshooting
 So something has gone wrong.
 
-It happens, but here's a few things that can you help you find what's happening, if these basic troubleshooting tips do not help checkout the Intel's FAQ and troubleshooting support
+It happens, but here's a few things that can you help you find what's happening, if these basic troubleshooting tips below do not help checkout the Intel's FAQ and troubleshooting support and forums.
 
-- https://software.intel.com/en-us/articles/intel-edison-troubleshooting-and-faq
-- https://software.intel.com/en-us/articles/intel-xdk-iot-edition-troubleshooting-and-faq
+- [Intel Edison Troubleshooting & FAQ](https://software.intel.com/en-us/articles/intel-edison-troubleshooting-and-faq)
+- [Intel XDK IoT Edition Troubleshooting & FAQ](https://software.intel.com/en-us/articles/intel-xdk-iot-edition-troubleshooting-and-faq)
 
 ## I cannot find my controller via the Intel XDK discovery
 This could be due to a number of reason give these a shot:
@@ -33,8 +33,7 @@ Verify the unique ID’s in your **credentials.json** are correct. Make sure you
 You can factory reset the device by doing the following steps
 
 - Plug cable into the filesystem usb port (Ensure switch is in down position)
-- Download the latest [Yocto image for Edison](http://downloadmirror.intel.com/24698/eng/edison-image-ww05-15.zip
-)
+- Download the latest [Yocto image for Edison](http://downloadmirror.intel.com/24698/eng/edison-image-ww05-15.zip)
 - Unzip it to your computer (*Moving files directly from the zip can causes issues so unzipping it locally is advised!*)
 - Drag and drop the files to the drive that appears as Edison that is now connected
 - Make a serial connection to your device using baud rate 115200
@@ -74,7 +73,9 @@ This is an intermittent problem normally. Try an SSH/Serial connection, reboot y
 
 ## Receiving *Intel XDK - IoT App Daemon (requires Intel XDK IoT Edition greater than 075) v0.0.27 - commands: run, list, debug, status*
 
-configure_edison -upgrade
+SSH into the Edison and run
+
+  - configure_edison --upgrade
 
 ## Receiving *uncaught Exception occurred Error: dns.service.error: bad reference* 
 
@@ -87,7 +88,7 @@ Reboot the device
   - systemctl restart xdk-daemon
 
 ## Can't connect via daemon
-Your host machine changed IP address and it's not in the whitelist
+Your host machine changed IP address and it's not in the white list
 
   - xdk-whitelist --list 
   - xdk-whitelist --add <Your ip address>
@@ -111,8 +112,7 @@ Ensure the FTDI driver is installed on your machine (Windows users need to do th
 ## How do I do a factory reset
 
 - Plug cable into the filesystem usb port (Ensure switch is in down position)
-- Download the latest [Yocto image for Edison](http://downloadmirror.intel.com/24698/eng/edison-image-ww05-15.zip
-) and unzip it to your computer (*Moving files directly from the zip can causes issues so unzipping it locally is advised!*)
+- Download the latest [Yocto image for Edison](http://downloadmirror.intel.com/24698/eng/edison-image-ww05-15.zip) and unzip it to your computer (*Moving files directly from the zip can causes issues so unzipping it locally is advised!*)
 - Drag and drop the files to the Edison drive that is now connected
 - Make a serial connection to your device
 - Power off
@@ -122,6 +122,6 @@ Ensure the FTDI driver is installed on your machine (Windows users need to do th
 - run do_ota
 - Done!
 
-## When I reboot the Edison it crashes my OSX machine and it foreces a restart 
+## When I reboot the Edison it crashes my OSX machine and it forces a restart 
 This is a strange issue which is hard to pin point... We found it occurs only when you have a micro usb cable connected for the file system along with no power supply. Connect a power supply or remove the filesystem whilst you reboot.
 
