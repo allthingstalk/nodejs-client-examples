@@ -3,6 +3,26 @@ var grove = require('jsupm_grove');
 
 smartliving.credentials = require('./credentials');
 
+// Create the Grove LED object using GPIO pin 4
+var d4 = new grove.GroveLed(4);
+
+// Set up the LED actuator
+led = smartliving.addAsset(
+  "d4",
+  "A little LED",
+  "A connected LED",
+  "bool",
+  function(){
+      console.log("LED actuator enrolled")
+  },function(command) {
+    if(command=="true"){
+      led.on();
+    }else{
+      led.off();
+    }
+}
+);
+
 // Create the Grove button object using GPIO pin 2
 // NOTE: We're using the GroveButton UPM library which behaves exactly the same for PIR Motion sensor
 var d2 = new grove.GroveButton(2);

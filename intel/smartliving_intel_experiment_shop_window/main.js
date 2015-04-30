@@ -7,7 +7,7 @@ smartliving.credentials = require('./credentials');
 var d4 = new grove.GroveLed(4);
 
 // Set up the LED actuator
-led = smartliving.addAsset(
+smartliving.addAsset(
 	"d4",
 	"Shop window lighting",
 	"A connected LED strip",
@@ -16,9 +16,9 @@ led = smartliving.addAsset(
     	console.log("LED actuator enrolled")
 	},function(command) {
     if(command=="true"){
-      led.on();
+      d4.on();
     }else{
-      led.off();
+      d4.off();
     }
 }
 );

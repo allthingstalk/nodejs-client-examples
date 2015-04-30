@@ -8,7 +8,7 @@ smartliving.credentials = require('./credentials');
 var d7 = new grove.GroveLed(7);
 
 // Set up the Vibration motor actuator
-led = smartliving.addAsset(
+smartliving.addAsset(
 	"d7",
 	"Vibrate notification",
 	"A vibrate alert system",
