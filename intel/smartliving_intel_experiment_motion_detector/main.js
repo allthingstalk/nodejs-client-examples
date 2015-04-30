@@ -11,14 +11,14 @@ led = smartliving.addAsset(
   "d4",
   "A little LED",
   "A connected LED",
-  "bool",
+  "boolean",
   function(){
       console.log("LED actuator enrolled")
   },function(command) {
     if(command=="true"){
-      led.on();
+      d4.on();
     }else{
-      led.off();
+      d4.off();
     }
 }
 );
@@ -48,9 +48,9 @@ setInterval(function(){
 	
   if (state != reading){ 				 
     if (state){
-       smartliving.send("true", "d2");
-    }else{
        smartliving.send("false", "d2");
+    }else{
+       smartliving.send("true", "d2");
     }
 	  state = !state;
   }
