@@ -4,6 +4,6 @@
   "version": "0.0.0",
   "main": "main.js",
   "dependencies": {
-    "smartliving": "^0.0.20"
+    "smartliving": "*"
   }
 }
