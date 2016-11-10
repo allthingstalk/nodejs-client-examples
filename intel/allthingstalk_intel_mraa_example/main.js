@@ -1,4 +1,4 @@
-var smartliving = require('smartliving');
+var allthingstalk = require('allthingstalk');
 var mraa = require('mraa'); //Wrapper for GPIO Pins
 
 var a0 = new mraa.Aio(0); //setup access analog input Analog pin #0 (A0)
@@ -7,10 +7,10 @@ var d4 = new mraa.Gpio(4); //LED hooked up to digital pin 4
 d4.dir(mraa.DIR_OUT); //set the gpio direction to output
 var state = false; //Boolean to hold the state of Led
 
-smartliving.credentials = require('./credentials');
+allthingstalk.credentials = require('./credentials');
 
 // Set up the Potentiometer Sensor
-smartliving.addAsset(
+allthingstalk.addAsset(
 	"0",
 	"Thermo-reactor turbine speed controller",
 	"Controls the main turbine of the nuclear reactor, using a good ol' potentiometer",
@@ -21,7 +21,7 @@ smartliving.addAsset(
 );
 
 // Set up the LED Actuators
-smartliving.addAsset(
+allthingstalk.addAsset(
 	"4",
 	"Missile launcher",
 	"Fires missiles at incoming spacecraft, and also a neat LED for some visual feedback...",
@@ -35,9 +35,9 @@ smartliving.addAsset(
 	}
 );
 
-smartliving.connect();
+allthingstalk.connect();
 
 setInterval(function(){
     var value = a0.read(); //read the value of the analog pin
-    smartliving.send(value, "0")
+    allthingstalk.send(value, "0")
 }, 5000);

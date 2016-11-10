@@ -1,13 +1,13 @@
-var smartliving = require('smartliving');
+var allthingstalk = require('allthingstalk');
 var grove = require('jsupm_grove');
 
-smartliving.credentials = require('./credentials');
+allthingstalk.credentials = require('./credentials');
 
 // Create the Grove LED object using GPIO pin 4
 var d4 = new grove.GroveLed(4);
 
 // Set up the LED actuator
-led = smartliving.addAsset(
+led = allthingstalk.addAsset(
   "d4",
   "A little LED",
   "A connected LED",
@@ -28,7 +28,7 @@ led = smartliving.addAsset(
 var d2 = new grove.GroveButton(2);
 
 // Set up the PIR sensor
-pir = smartliving.addAsset(
+pir = allthingstalk.addAsset(
 	"d2",
 	"Motion detector",
 	"Detects passive infrared motion",
@@ -38,7 +38,7 @@ pir = smartliving.addAsset(
 	}
 );
 
-smartliving.connect();
+allthingstalk.connect();
 
 var state = false; //Don't send the value if it hasn't changed
 
@@ -48,9 +48,9 @@ setInterval(function(){
 	
   if (state != reading){ 				 
     if (state){
-       smartliving.send("false", "d2");
+       allthingstalk.send("false", "d2");
     }else{
-       smartliving.send("true", "d2");
+       allthingstalk.send("true", "d2");
     }
 	  state = !state;
   }

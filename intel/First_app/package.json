@@ -1,12 +1,12 @@
 {
   "name": "First_app",
-  "description": "This is the quick starting point for your Smartliving Maker expirience",
+  "description": "This is the quick starting point for your allthingstalk Maker expirience",
   "version": "0.0.0",
   "main": "main.js",
   "engines": {
     "node": ">=0.10.0"
   },
   "dependencies": {
-      "smartliving": "*"
+      "allthingstalk": "*"
   }
 }

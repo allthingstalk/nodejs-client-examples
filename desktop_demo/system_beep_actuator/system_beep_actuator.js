@@ -1,8 +1,8 @@
-var smartliving = require('smartliving');
+var allthingstalk = require('allthingstalk');
 
-smartliving.credentials = require('./credentials');
+allthingstalk.credentials = require('./credentials');
 
-smartliving.addAsset("104",
+allthingstalk.addAsset("104",
 	"Notifcation beeper",
 	"This is a simple node.js system beep actuator, use it for notifications",
 	"bool", 
@@ -13,4 +13,4 @@ smartliving.addAsset("104",
 		console.log('\u0007');	//Generic system beep!
 	});
 
-smartliving.connect();
+allthingstalk.connect();

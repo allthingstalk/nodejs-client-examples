@@ -1,0 +1,9 @@
+{
+  "name": "allthingstalk_intel_getting_started_upm",
+  "description": "This is 'hello world' style IoT application for starting to use your Intel controller with the allthingstalk IoT Cloud",
+  "version": "0.0.0",
+  "main": "main.js",
+  "dependencies": {
+    "allthingstalk": "*"
+  }
+}

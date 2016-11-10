@@ -1,10 +1,10 @@
-var smartliving = require('smartliving');
+var allthingstalk = require('allthingstalk');
 
-smartliving.credentials = require('./credentials');
+allthingstalk.credentials = require('./credentials');
 
-smartliving.addAsset(
+allthingstalk.addAsset(
   "105",
-  "HTTP Request Actuator", "A simple node.js 'http request actuator' for you to send HTTP messages from the SmartLiving Cloud",
+  "HTTP Request Actuator", "A simple node.js 'http request actuator' for you to send HTTP messages from the allthingstalk Cloud",
   "string",
   function(){
   	console.log("HTTP Actuator enrolled"),
@@ -16,4 +16,4 @@ smartliving.addAsset(
   }
  );
 
-smartliving.connect();
+allthingstalk.connect();

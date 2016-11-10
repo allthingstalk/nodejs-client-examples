@@ -1,19 +1,18 @@
-var smartliving = require('smartliving');
+var allthingstalk = require('allthingstalk');
 
-smartliving.credentials = require('./credentials');
+allthingstalk.credentials = require('./credentials');
 
-var cli = smartliving.addAsset(
+var cli = allthingstalk.addAsset(
   "101",
   "Command-line input sensor",
-  "A simple node.js 'cli sensor' for you to test your connection with SmartLiving, regardless of OS",
+  "A simple node.js 'cli sensor' for you to test your connection with allthingstalk, regardless of OS",
   "string",
   function(){
     console.log("cli sensor enrolled\n");
     console.log("Enter your sensor data:");
 });
 
-smartliving.connect();
-console.log("\nCheck out this widget to view your data in a web app: \n\nhttp://widget.smartliving.io/textbox/?device=" + smartliving.credentials.deviceId + "&asset="+smartliving.credentials.deviceId +cli.localId+"&key="+smartliving.credentials.clientKey +"&id="+smartliving.credentials.clientId +"&type=sensor\n");
+allthingstalk.connect();
  
   process.stdin.resume();
   process.stdin.setEncoding('utf8');
@@ -25,6 +24,6 @@ console.log("\nCheck out this widget to view your data in a web app: \n\nhttp://
     }
 
     console.log("\n");
-    smartliving.send(result, "101");
+    allthingstalk.send(result, "101");
     console.log("Enter your sensor payload data:");
   });

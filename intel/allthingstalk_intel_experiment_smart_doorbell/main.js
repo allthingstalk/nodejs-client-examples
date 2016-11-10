@@ -1,13 +1,13 @@
-var smartliving = require('smartliving');
+var allthingstalk = require('allthingstalk');
 var grove = require('jsupm_grove');
 
-smartliving.credentials = require('./credentials');
+allthingstalk.credentials = require('./credentials');
 
 // Create the Grove button object using GPIO pin 8
 var d8 = new grove.GroveButton(8);
 
 // Set up the push button sensor
-button = smartliving.addAsset(
+button = allthingstalk.addAsset(
 	"d8",
 	"Doorbell push button",
 	"A digital push button",
@@ -17,7 +17,7 @@ button = smartliving.addAsset(
 	}
 );
 
-smartliving.connect();
+allthingstalk.connect();
 
 var state = false; //Boolean to hold the state of pin
 
@@ -26,9 +26,9 @@ setInterval(function(){
   var reading = d8.value();
   if (state != reading){ 				   
     if (state){
-       smartliving.send("false", "d8");
+       allthingstalk.send("false", "d8");
     }else{
-       smartliving.send("true", "d8");
+       allthingstalk.send("true", "d8");
     }
     state=!state;
   }

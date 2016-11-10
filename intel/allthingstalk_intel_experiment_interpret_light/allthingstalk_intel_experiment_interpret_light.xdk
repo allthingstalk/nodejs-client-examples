@@ -29,7 +29,7 @@
           "android-installLocation": "auto"
         },
         "isActive_": true,
-        "appName_": "smartliving_intel_experiment_motion_detector",
+        "appName_": "allthingstalk_intel_experiment_interpret_light",
         "appID_": "not.yet.specified",
         "appAccess_": [
           {
@@ -55,7 +55,7 @@
           "android-installLocation": "auto"
         },
         "isActive_": true,
-        "appName_": "smartliving_intel_experiment_motion_detector",
+        "appName_": "allthingstalk_intel_experiment_interpret_light",
         "appID_": "not.yet.specified",
         "appAccess_": [
           {
@@ -80,7 +80,7 @@
           "ios-configuration": "adhoc"
         },
         "isActive_": true,
-        "appName_": "smartliving_intel_experiment_motion_detector",
+        "appName_": "allthingstalk_intel_experiment_interpret_light",
         "appID_": "not.yet.specified",
         "appAccess_": [
           {
@@ -101,7 +101,7 @@
         "name_": "Windows8",
         "preferences_": {},
         "isActive_": true,
-        "appName_": "smartliving_intel_experiment_motion_detector",
+        "appName_": "allthingstalk_intel_experiment_interpret_light",
         "appID_": "not.yet.specified",
         "appAccess_": [
           {

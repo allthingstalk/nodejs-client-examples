@@ -1,14 +1,14 @@
-var smartliving = require('smartliving');
+var allthingstalk = require('allthingstalk');
 var grove = require('jsupm_grove');
 
-smartliving.credentials = require('./credentials');
+allthingstalk.credentials = require('./credentials');
 
 // Create the Grove object using GPIO pin 7
 // NOTE: We're using the GroveLed UPM library which behaves exactly the same for vibration motor
 var d7 = new grove.GroveLed(7);
 
 // Set up the Vibration motor actuator
-smartliving.addAsset(
+allthingstalk.addAsset(
 	"d7",
 	"Vibrate notification",
 	"A vibrate alert system",
@@ -24,4 +24,4 @@ smartliving.addAsset(
   }
 );
 
-smartliving.connect();
+allthingstalk.connect();

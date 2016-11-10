@@ -1,4 +1,4 @@
-# SmartLiving Intel Galileo & Edison IoT XDK Node.js Apps and Experiments
+# AllThingsTalk Intel Galileo & Edison IoT XDK Node.js Apps and Experiments
 
 Here you'll find everything you need to get started with your SmartLiving IoT Starter Kit: Intel Edison Edition.
 
@@ -138,7 +138,7 @@ Here's a list of experiments available to try:
 
 Head over to the SmartLiving Doc's website to find out more.
 
-[docs.smartliving.io](http://docs.smartliving.io)
+[AllThingsTalk docs](http://allthingstalk.com/documentation)
 
 
 ### Hardware setup for Apps and Experiments

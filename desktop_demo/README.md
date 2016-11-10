@@ -1,6 +1,6 @@
-# SmartLiving Internet of Things Node.js  - Desktop demos
+# AllThingsTalk Internet of Things Node.js  - Desktop demos
 
-These are a collection of scripts that you can test the nodejs-client with and connect your pc or mac as an IoT device with SmartLiving.
+These are a collection of scripts that you can test the nodejs-client with and connect your pc or mac as an IoT device with AllThingsTalk.
 
 Current demos:
 
@@ -12,7 +12,7 @@ Current demos:
 ## Set up & demo
 Get started with the command line sensor app
 
-	npm install smartliving
+	npm install AllThingsTalk
 	git clone http://github.com/allthingstalk/nodejs-client-examples
 	cd nodejs-client-examples/desktop_demo/cli_sensor
 	//Create and update your credentials.json file**
@@ -29,6 +29,6 @@ Get started with the command line sensor app
    			"clientKey":"Cl13n7K3y"
 		}
 
-- Create a **device** over at [beta.smartliving.io](http://beta.smartliving.io) and open the sidebar to find your unique deviceId, clientId and clientKey
+- Create a **device** over at [maker.allthingstalk.com](http://maker.allthingstalk.com) and open the sidebar to find your unique deviceId, clientId and clientKey
 - Copy and paste your ID's to the correct fields in the credentials.json file you created
 - Save and run the app!

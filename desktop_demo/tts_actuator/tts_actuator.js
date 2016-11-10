@@ -1,9 +1,9 @@
-var smartliving = require('smartliving');
+var allthingstalk = require('allthingstalk');
 var tts = require('say');
 
-smartliving.credentials = require('./credentials');
+allthingstalk.credentials = require('./credentials');
 
-smartliving.addAsset("109",
+allthingstalk.addAsset("109",
 	"A text to speech actuator",
 	"A simple node.js text to speech actuator, use it for notifications, and stuff....",
 	"string",
@@ -14,4 +14,4 @@ smartliving.addAsset("109",
   		tts.speak(null, message);
 	});
 
-smartliving.connect();
+allthingstalk.connect();
