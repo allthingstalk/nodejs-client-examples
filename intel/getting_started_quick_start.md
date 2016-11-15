@@ -1,17 +1,17 @@
-# Getting started with SmartLiving and Edison quick guide
+# Getting started with AllThingsTalk and Edison quick guide
 
-**Here's a short sharp starter guide for getting started with SmartLiving and the Intel Edison.
+**Here's a short sharp starter guide for getting started with AllThingsTalk and the Intel Edison.
 
-If you have troubles try out the [step by step walk through](http://docs.smartliving.io/Get_Started/Intel_Edison/Step_by_Step).**
+If you have troubles try out the [step by step walk through](http://allthingstalk.com/documentation/Get_Started/Intel_Edison/Step_by_Step).**
 
 
-- Download the [SmartLiving examples from GitHub](https://github.com/allthingstalk/nodejs-client-examples)
+- Download the [AllThingsTalk examples from GitHub](https://github.com/allthingstalk/nodejs-client-examples)
 
 	*git clone http://github.com/allthingstalk/nodejs-client-examples*
 
 - Open the getting started project with the Intel XDK
 
-	*/nodejs-client-examples/intel/smartliving_intel_getting_started_upm/smartliving_intel_getting_started_upm.xdk*
+	*/nodejs-client-examples/intel/AllThingsTalk_intel_getting_started_upm/AllThingsTalk_intel_getting_started_upm.xdk*
 
 - Setup your controller and hardware
 
@@ -20,7 +20,7 @@ If you have troubles try out the [step by step walk through](http://docs.smartli
 	- LED to D4
 	- Power up your device
 
-- Log in and create your device over at [beta.smartLiving.io](http://beta.smartliving.io)
+- Log in and create your device over at [maker.allthingstalk.com](http://maker.allthingstalk.com)
 - Create and configure your *credentials.json* at the root of the project
     
         { 
@@ -47,7 +47,7 @@ If you have troubles try out the [step by step walk through](http://docs.smartli
 
 - Try out your automation rule!
 
-** This quick start assumes you've already installed the XDK, prepared your controller, and took your Edison on a test flight. Check out the [introduction](http://docs.smartliving.io/Get_Started/Intel_Edison/) to get through these things **
+** This quick start assumes you've already installed the XDK, prepared your controller, and took your Edison on a test flight. Check out the [introduction](http://allthingstalk.com/documentation/Get_Started/Intel_Edison/) to get through these things **
     
 ## Next steps
 

@@ -1,8 +1,22 @@
-var smartliving = require('smartliving');
+/*
+   Copyright 2014-2016 AllThingsTalk
 
-smartliving.credentials = require('./credentials');
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
 
-smartliving.addAsset("104",
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+*/   
+
+var allthingstalk = require('allthingstalk');
+
+allthingstalk.credentials = require('./credentials');
+
+allthingstalk.addAsset("104",
 	"Notifcation beeper",
 	"This is a simple node.js system beep actuator, use it for notifications",
 	"bool", 
@@ -13,4 +27,4 @@ smartliving.addAsset("104",
 		console.log('\u0007');	//Generic system beep!
 	});
 
-smartliving.connect();
+allthingstalk.connect();

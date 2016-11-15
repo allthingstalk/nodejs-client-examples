@@ -13,21 +13,29 @@
 */   
 
 var allthingstalk = require('allthingstalk');
+var grove = require('jsupm_grove');
 
 allthingstalk.credentials = require('./credentials');
 
-allthingstalk.addAsset(
-  "105",
-  "HTTP Request Actuator", "A simple node.js 'http request actuator' for you to send HTTP messages from the allthingstalk Cloud",
-  "string",
-  function(){
-  	console.log("HTTP Actuator enrolled"),
-  },
-  function(req){
-  request(req, function(){
-  	console.log("HTTP Request sent");
-  } || function() {});
-  }
- );
+// Create the Grove Light sensor object using GPIO pin a1
+var a1 = new grove.GroveLight(1);
+
+// Set up the push button sensor
+light = allthingstalk.addAsset(
+	"a1",
+	"Lux sensor",
+	"Reads light in lux",
+	"int",
+	function(){
+    	console.log("Light sensor enrolled")
+	}
+);
 
 allthingstalk.connect();
+
+setInterval(function(){
+  console.log(a1.name() + " raw value is " + a1.raw_value() +
+            ", which is roughly " + a1.value() + " lux");
+	
+  allthingstalk.send(a1.value(), "a1");
+},5000);

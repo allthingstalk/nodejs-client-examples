@@ -1,19 +1,19 @@
-# SmartLiving Intel Galileo & Edison IoT XDK Node.js Apps and Experiments
+# AllThingsTalk Intel Galileo & Edison IoT XDK Node.js Apps and Experiments
 
-Here you'll find everything you need to get started with your SmartLiving IoT Starter Kit: Intel Edison Edition.
+Here you'll find everything you need to get started with your AllThingsTalk IoT Starter Kit: Intel Edison Edition.
 
 This kit uses the awesome Intel IoT XDK (Cross-platform Development Kit) for Galileo & Edison, making it easy to program IoT applications.
 
 ## What can you find?
 
 - Preparing the Intel IoT Hardware and Software
-- SmartLiving IoT Starter Kit - Apps and Experiments
-- 10 step getting started for SmartLiving and Intel IoT **(For pro's)**
-- Step by step walkthrough getting started for SmartLiving and Intel IoT **(For beginners)**
+- AllThingsTalk IoT Starter Kit - Apps and Experiments
+- 10 step getting started for AllThingsTalk and Intel IoT **(For pro's)**
+- Step by step walkthrough getting started for AllThingsTalk and Intel IoT **(For beginners)**
 - Next steps
 
 ## Preparing your IoT Hardware & Software
-Here's a few pointers to get you ready to develop with SmartLiving and Intel.
+Here's a few pointers to get you ready to develop with AllThingsTalk and Intel.
 
 ### Intel XDK IoT Edition Install & Overview 
 
@@ -105,7 +105,7 @@ For more help setting up your Edison check out the Intel developer resources for
 
 
 ### First run Blinking LED
-Before getting started building your IoT applications with SmartLiving, let's test drive what's just been set up with a Blinking LED 
+Before getting started building your IoT applications with AllThingsTalk, let's test drive what's just been set up with a Blinking LED 
 
 - Open the projects/welcome page of the XDK
 - Select 'New project based on template'
@@ -122,8 +122,8 @@ The onboard LED should now be blinking. AMAZING!
 
 *But you can download and open them in the XDK*
 
-# SmartLiving IoT Starter Kit - Apps and Experiments
-To get started with SmartLiving there's a getting started project and some experiments for you to try out.
+# AllThingsTalk IoT Starter Kit - Apps and Experiments
+To get started with AllThingsTalk there's a getting started project and some experiments for you to try out.
 
 [10 step quick start for pro's](https://github.com/allthingstalk/nodejs-client-examples/blob/master/intel/getting_started_quick_start.md)
 
@@ -136,9 +136,9 @@ Here's a list of experiments available to try:
 - Smart shop window
 - Motion detector to Android text-to-speech trigger
 
-Head over to the SmartLiving Doc's website to find out more.
+Head over to the AllThingsTalk Doc's website to find out more.
 
-[docs.smartliving.io](http://docs.smartliving.io)
+[AllThingsTalk docs](http://allthingstalk.com/docs)
 
 
 ### Hardware setup for Apps and Experiments
@@ -175,7 +175,7 @@ Checkout this great collection of Node.js examples using a whole range of Grove 
 
 
 ### Getting started with Galileo
-If you have an Intel Galileo, you can try out all the exact same apps and experiments available with the SmartLiving Edison Kit.
+If you have an Intel Galileo, you can try out all the exact same apps and experiments available with the AllThingsTalk Edison Kit.
 
 The Galileo uses an SD card to store its operating system so you will need to grab the latest OS and burn it to your card. Let's prep' it.
 

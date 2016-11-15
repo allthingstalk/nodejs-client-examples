@@ -13,31 +13,37 @@
 */   
 
 var allthingstalk = require('allthingstalk');
+var grove = require('jsupm_grove');
 
 allthingstalk.credentials = require('./credentials');
 
-var cli = allthingstalk.addAsset(
-  "101",
-  "Command-line input sensor",
-  "A simple node.js 'cli sensor' for you to test your connection with allthingstalk, regardless of OS",
-  "string",
-  function(){
-    console.log("cli sensor enrolled\n");
-    console.log("Enter your sensor data:");
-});
+// Create the Grove button object using GPIO pin 8
+var d8 = new grove.GroveButton(8);
+
+// Set up the push button sensor
+button = allthingstalk.addAsset(
+	"d8",
+	"Doorbell push button",
+	"A digital push button",
+	"bool",
+	function(){
+    console.log("Push button enrolled")
+	}
+);
 
 allthingstalk.connect();
- 
-  process.stdin.resume();
-  process.stdin.setEncoding('utf8');
-  
-  process.stdin.on('data', function (result) {  
-    if (result === 'quit\n') {
-      console.log('Bye bye.');
-      process.exit();
-    }
 
-    console.log("\n");
-    allthingstalk.send(result, "101");
-    console.log("Enter your sensor payload data:");
-  });
+var state = false; //Boolean to hold the state of pin
+
+setInterval(function(){
+ 
+  var reading = d8.value();
+  if (state != reading){ 				   
+    if (state){
+       allthingstalk.send("false", "d8");
+    }else{
+       allthingstalk.send("true", "d8");
+    }
+    state=!state;
+  }
+},100);

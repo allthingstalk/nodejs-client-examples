@@ -1,13 +1,13 @@
-# SmartLiving Internet of Things Node.js library, for Raspberry Pi, Intel Edison/Galileo, Web services
+# AllThingsTalk Internet of Things Node.js library, for Raspberry Pi, Intel Edison/Galileo, Web services
 
-Use it to connect your sensors, actuators, apps, services, controllers... Cat, dog, grandmother to the SmartLiving IoT Cloud platform, and interact with any other hardware or front-end you connect using REST, MQTT, STOMP, or AMQP.
+Use it to connect your sensors, actuators, apps, services, controllers... Cat, dog, grandmother to the AllThingsTalk IoT Cloud platform, and interact with any other hardware or front-end you connect using REST, MQTT, STOMP, or AMQP.
 
-For more info' on what you can connect checkout [www.smartliving.io](http://www.smartliving.io)
+For more info' on what you can connect checkout [maker.allthingstalk.com](http://www.maker.allthingstalk.com)
 
 ## Quick start example
 Get started with the command line sensor app
 
-	npm install smartliving
+	npm install allthingstalk
 	git clone http://github.com/allthingstalk/nodejs-client-examples
 	cd nodejs-client-examples/desktop_demo/cli_sensor
 	//Create and update your credentials.json file**
@@ -24,7 +24,7 @@ Get started with the command line sensor app
    			"clientKey":"Cl13n7K3y"
 		}
 
-- Create a **device** over at [beta.smartliving.io](http://beta.smartliving.io) and open the sidebar to find your unique deviceId, clientId and clientKey
+- Create a **device** over at [maker.AllThingsTalk.com](http://maker.allthingstalk.com) and open the sidebar to find your unique deviceId, clientId and clientKey
 - Copy and paste your ID's to the correct fields in the credentials.json file you created
 - Save and run the app!
 
@@ -32,12 +32,12 @@ Get started with the command line sensor app
 ## Playing with the examples
 There are many examples included that will run on Intel Galileo and Edison, as web services, and other desktop demos. 
 
-For more info' checkout [Node.js client library at Github](https://github.com/allthingstalk/nodejs-client) and the [SmartLiving Doc's](http://docs.smartliving.io).
+For more info' checkout [Node.js client library at Github](https://github.com/allthingstalk/nodejs-client) and the [AllThingsTalk Doc's](http://allthingstalk.com/docs).
 
 Here's a list of the examples:
 
 - [Intel Galileo & Edison](https://github.com/allthingstalk/nodejs-client-examples/tree/master/intel)
-	- Getting Started with SmartLiving & the Intel IoT XDK
+	- Getting Started with AllThingsTalk & the Intel IoT XDK
 	- Smart doorbell
 	- Get warned when your Smartphone is unplugged
 	- Sense and interpret light values
@@ -51,5 +51,5 @@ Here's a list of the examples:
 
 ## Todo list
 - Update the Raspberry Pi pi-gpio examples 
-- Provide better integration of SmartLiving widgets that can be loaded via the Intel XDK
+- Provide better integration of AllThingsTalk widgets that can be loaded via the Intel XDK
 - Check if the credentials.json exists, if not walk the user through how to get these details eb-styley through the API

@@ -20,7 +20,7 @@ This could be due to a number of reason give these a shot:
 ## The project cannot find *request*
 There was a problem with node.js downloading the correct library from npm. Ensure you run Install/Build from the XDK otherwise try a reboot your controller 
 
-## Assets are not created under my device in the SmartLiving Web App
+## Assets are not created under my device in the AllThingsTalk Web App
 
 Verify the unique ID’s in your **credentials.json** are correct. Make sure you have identical Unique ID and API keys copied from your account (Could be you have the wrong deviceId!).
 

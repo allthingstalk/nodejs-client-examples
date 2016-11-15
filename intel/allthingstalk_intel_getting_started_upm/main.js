@@ -1,14 +1,28 @@
-var smartliving = require('smartliving');
+/*
+   Copyright 2014-2016 AllThingsTalk
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+*/   
+
+var allthingstalk = require('allthingstalk');
 var grove = require('jsupm_grove');
 
-smartliving.credentials = require('./credentials');
+allthingstalk.credentials = require('./credentials');
 
 // Create the Grove LED object using GPIO pin 4
 var d4 = new grove.GroveLed(4);
 var a0 = new grove.GroveRotary(0);
 
 // Set up the Potentiometer Sensor
-pot = smartliving.addAsset(
+pot = allthingstalk.addAsset(
 	"a0",
 	"Thermo-reactor turbine speed controller",
 	"Controls the main turbine of the nuclear reactor, using a good ol' potentiometer",
@@ -19,7 +33,7 @@ pot = smartliving.addAsset(
 );
 
 // Set up the LED Actuators
-led = smartliving.addAsset(
+led = allthingstalk.addAsset(
 	"d4",
 	"Missile launcher notification",
 	"Fires missiles at incoming spacecraft, and also a neat LED for some visual feedback...",
@@ -36,7 +50,7 @@ led = smartliving.addAsset(
 	}
 );
 
-smartliving.connect();
+allthingstalk.connect();
 
 setInterval(function(){
     //Write the knob value to the console in different formats
@@ -51,5 +65,5 @@ setInterval(function(){
     console.log("Abs: " + abs + " " + Math.round(parseInt(absdeg)) + " " + absrad.toFixed(3));
     console.log("Rel: " + rel + " " + Math.round(parseInt(reldeg)) + " " + relrad.toFixed(3));
 
-    smartliving.send(abs, "a0");
+    allthingstalk.send(abs, "a0");
 },1000);

@@ -1,9 +1,9 @@
 {
-  "name": "smartliving_intel_experiment_vibrate_alert",
+  "name": "allthingstalk_intel_experiment_vibrate_alert",
   "description": "",
   "version": "0.0.0",
   "main": "main.js",
   "dependencies": {
-    "smartliving": "*"
+    "allthingstalk": "*"
   }
 }

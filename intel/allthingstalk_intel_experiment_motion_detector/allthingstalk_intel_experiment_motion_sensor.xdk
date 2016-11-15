@@ -3,9 +3,9 @@
     "projectSettingsVersion": "1.2",
     "creationData": {
       "projectTypeName": "com.intel.xdk.projecttype.iotapp",
-      "projectGuid": "71f90d61-a3b2-49c3-b650-b6dbfa949b02",
-      "lastModifiedDate": 1427832804184,
-      "creationDate": 1427832804121
+      "projectGuid": "3d70bb7f-4605-416e-b923-fc5abb10c012",
+      "lastModifiedDate": 1428253781776,
+      "creationDate": 1428253781608
     },
     "sourceDirectory": "",
     "cordovaPluginsDirectory": "plugins",
@@ -29,7 +29,7 @@
           "android-installLocation": "auto"
         },
         "isActive_": true,
-        "appName_": "smartliving_intel_getting_started_upm",
+        "appName_": "allthingstalk_intel_experiment_motion_detector",
         "appID_": "not.yet.specified",
         "appAccess_": [
           {
@@ -55,7 +55,7 @@
           "android-installLocation": "auto"
         },
         "isActive_": true,
-        "appName_": "smartliving_intel_getting_started_upm",
+        "appName_": "allthingstalk_intel_experiment_motion_detector",
         "appID_": "not.yet.specified",
         "appAccess_": [
           {
@@ -80,7 +80,7 @@
           "ios-configuration": "adhoc"
         },
         "isActive_": true,
-        "appName_": "smartliving_intel_getting_started_upm",
+        "appName_": "allthingstalk_intel_experiment_motion_detector",
         "appID_": "not.yet.specified",
         "appAccess_": [
           {
@@ -101,7 +101,7 @@
         "name_": "Windows8",
         "preferences_": {},
         "isActive_": true,
-        "appName_": "smartliving_intel_getting_started_upm",
+        "appName_": "allthingstalk_intel_experiment_motion_detector",
         "appID_": "not.yet.specified",
         "appAccess_": [
           {
