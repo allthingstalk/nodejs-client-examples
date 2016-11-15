@@ -32,7 +32,7 @@ Get started with the command line sensor app
 ## Playing with the examples
 There are many examples included that will run on Intel Galileo and Edison, as web services, and other desktop demos. 
 
-For more info' checkout [Node.js client library at Github](https://github.com/allthingstalk/nodejs-client) and the [SmartLiving Doc's](http://docs.smartliving.io).
+For more info' checkout [Node.js client library at Github](https://github.com/allthingstalk/nodejs-client) and the [AllThingsTalk Doc's](http://allthingstalk.com/docs).
 
 Here's a list of the examples:
 
