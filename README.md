@@ -1,3 +1,9 @@
+### This library is deprecated
+
+nodejs-client-examples library is deprecated, and will not receive any further updates. Please use [nodejs-sdk](https://github.com/allthingstalk/nodejs-sdk) instead.
+
+---
+
 # AllThingsTalk Internet of Things Node.js library, for Raspberry Pi, Intel Edison/Galileo, Web services
 
 Use it to connect your sensors, actuators, apps, services, controllers... Cat, dog, grandmother to the AllThingsTalk IoT Cloud platform, and interact with any other hardware or front-end you connect using REST, MQTT, STOMP, or AMQP.
